@@ -65,7 +65,7 @@ struct amqp_socket_class_t {
   amqp_socket_open_fn open;
   amqp_socket_close_fn close;
   amqp_socket_get_sockfd_fn get_sockfd;
-  amqp_socket_delete_fn delete;
+  amqp_socket_delete_fn delete_;
 };
 
 /** Abstract base class for amqp_socket_t */
