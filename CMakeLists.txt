@@ -116,7 +116,7 @@ if (CLOCK_GETTIME_NEEDS_LIBRT OR POSIX_SPAWNP_NEEDS_LIBRT)
   set(LIBRT rt)
 endif()
 
-option(ENABLE_SSL_SUPPORT "Enable SSL support" ON)
+option(ENABLE_SSL_SUPPORT "Enable SSL support" OFF)
 
 if (ENABLE_SSL_SUPPORT)
   find_package(OpenSSL 0.9.8 REQUIRED)
@@ -258,13 +258,13 @@ if (POPT_FOUND AND XmlTo_FOUND)
 endif()
 
 
-option(BUILD_SHARED_LIBS "Build rabbitmq-c as a shared library" ON)
+option(BUILD_SHARED_LIBS "Build rabbitmq-c as a shared library" OFF)
 option(BUILD_STATIC_LIBS "Build rabbitmq-c as a static library" ON)
 
-option(BUILD_EXAMPLES "Build Examples" ON)
+option(BUILD_EXAMPLES "Build Examples" OFF)
 option(BUILD_TOOLS "Build Tools (requires POPT Library)" ${POPT_FOUND})
 option(BUILD_TOOLS_DOCS "Build man pages for Tools (requires xmlto)" ${DO_DOCS})
-option(BUILD_TESTS "Build tests (run tests with make test)" ON)
+option(BUILD_TESTS "Build tests (run tests with make test)" OFF)
 option(BUILD_API_DOCS "Build Doxygen API docs" ${DOXYGEN_FOUND})
 
 if (NOT BUILD_SHARED_LIBS AND NOT BUILD_STATIC_LIBS)
